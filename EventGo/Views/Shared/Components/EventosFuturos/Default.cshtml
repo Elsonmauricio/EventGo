@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Evento>
+
+<h5>Eventos Futuros</h5>
+
+<ul class="list-group">
+    @foreach (var e in Model)
+    {
+        <li class="list-group-item">@e.Nome</li>
+    }
+</ul>

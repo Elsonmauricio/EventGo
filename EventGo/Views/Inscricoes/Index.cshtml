@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Inscricao>
+
+<h2>Inscrições</h2>
+<a href="/Inscricoes/Create" class="btn btn-primary">Nova</a>
+
+<table class="table">
+    <tr><th>Evento</th><th>Participante</th></tr>
+
+    @foreach (var i in Model)
+    {
+        <tr>
+            <td>@i.Evento?.Nome</td>
+            <td>@i.Participante?.Nome</td>
+        </tr>
+    }
+</table>
