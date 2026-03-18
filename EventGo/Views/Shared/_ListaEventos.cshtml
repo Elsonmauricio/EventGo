@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Evento>
+
+<ul class="list-group">
+    @foreach (var e in Model)
+    {
+        <li class="list-group-item">
+            @e.Nome - @e.Data.ToShortDateString()
+        </li>
+    }
+</ul>
