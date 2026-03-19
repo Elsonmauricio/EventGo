@@ -1,38 +1,70 @@
 /* --- ESTILO GLOBAL --- */
+html, body {
+  height: 100%; /* Necessário para o cálculo do min-height */
+}
+
 body {
-  /* Usa a fonte Poppins que carregámos no Layout */
   font-family: 'Poppins', sans-serif;
-  background-color: #f8f9fa; /* Um cinza muito claro para o fundo */
+  background-color: #f8f9fa;
   color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* --- AJUSTE DO CONTEÚDO PRINCIPAL --- */
+main {
+  flex: 1 0 auto;
+  display: block; /* Garante que se comporta como bloco */
+  position: relative;
 }
 
 /* --- TÍTULOS E TEXTO --- */
 h1, h2, h3, h4, h5, h6, .fw-bold {
-  font-weight: 700 !important; /* Mais grosso e impactante */
+  font-weight: 700 !important;
 }
 .fw-medium {
   font-weight: 500 !important;
 }
 
 /* --- COMPONENTES --- */
-/* Arredondar mais os botões padrão para um look moderno */
 .btn {
   border-radius: 8px; 
   font-weight: 500;
 }
 
+/* No footer, vamos remover qualquer herança do Bootstrap que possa estar a flutuar */
+.footer {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  padding: 1.5rem 0;
+  background-color: #ffffff !important;
+  width: 100%;
+  position: relative !important; /* O !important garante que nenhuma classe do Bootstrap o torne fixo */
+  margin-top: auto; 
+  display: block;
+}
 
-/* --- EFEITOS DE HOVER (Quando o rato passa por cima) --- */
-/* Efeito de elevação suave nos cartões */
+.footer-link {
+  color: #6c757d;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: #0d6efd;
+}
+
+/* --- EFEITOS DE HOVER --- */
 .card-hover-effect {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .card-hover-effect:hover {
-  transform: translateY(-5px); /* Sobe 5px */
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important; /* Sombra mais forte */
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
 }
 
-/* Efeito nos links da navbar */
 .nav-link:hover {
   color: #0d6efd !important;
 }
