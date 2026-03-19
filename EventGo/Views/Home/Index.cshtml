@@ -1,8 +1,88 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Página Inicial";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@* --- HERO SECTION (Banner Grande) --- *@
+@* Usamos um fundo gradiente para um look moderno *@
+<div class="p-5 mb-4 bg-primary text-white rounded-0 shadow-lg" style="background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);">
+    <div class="container py-5 text-center">
+        @* Título Grande e Forte *@
+        <h1 class="display-3 fw-bold mb-3">Encontra o Teu Próximo Evento Inesquecível.</h1>
+        @* Subtítulo mais calmo *@
+        <p class="col-md-8 mx-auto fs-5 mb-5 opacity-75">Explora concertos, conferências, workshops e muito mais perto de ti ou online. Organiza o teu próprio evento em minutos.</p>
+        
+        @* Botões de Ação Principais *@
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button type="button" class="btn btn-warning btn-lg px-4 me-sm-3 fw-bold text-dark rounded-pill shadow">
+                <a asp-controller="Home" asp-action="Explorar" class="btn btn-warning btn-lg px-4 me-sm-3 fw-bold text-dark rounded-pill shadow">
+                    <i class="bi bi-search me-2"></i>Explorar Agora
+                </a>
+            </button>
+            <button type="button" class="btn btn-outline-light btn-lg px-4 rounded-pill">
+                Saiba Mais<i class="bi bi-arrow-right ms-2"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+@* --- SECÇÃO DE EVENTOS DESTAQUE (Hardcoded para design) --- *@
+<div class="container my-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold">Eventos em Destaque</h2>
+        <a href="#" class="text-primary text-decoration-none small">Ver todos<i class="bi bi-arrow-right ms-1"></i></a>
+    </div>
+
+    @* Linha de Grelha (Grid) com 3 colunas em Desktop *@
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        
+        @* --- CARD DE EVENTO 1 (ESTÁTICO) --- *@
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0 card-hover-effect">
+                @* Imagem Placeholder (podes mudar depois) *@
+                <img src="https://via.placeholder.com/350x200/6610f2/ffffff?text=Concerto+Rock" class="card-img-top" alt="Concerto">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span class="badge bg-danger rounded-pill">Música</span>
+                        <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i>20 Mai, 2026</span>
+                    </div>
+                    <h5 class="card-title fw-bold">Festival Rock Cidade 2026</h5>
+                    <p class="card-text text-muted small">Um dia inesquecível com as melhores bandas nacionais e internacionais.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm w-100 stretched-link">Mais Detalhes</a>
+                </div>
+            </div>
+        </div>
+
+        @* --- CARD DE EVENTO 2 (ESTÁTICO) --- *@
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0 card-hover-effect">
+                <img src="https://via.placeholder.com/350x200/0d6efd/ffffff?text=Tech+Conf" class="card-img-top" alt="Tecnologia">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span class="badge bg-success rounded-pill">Tech</span>
+                        <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i>05 Jun, 2026</span>
+                    </div>
+                    <h5 class="card-title fw-bold">CodeSummit Portugal</h5>
+                    <p class="card-text text-muted small">A maior conferência de desenvolvimento de software em Lisboa.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm w-100 stretched-link">Mais Detalhes</a>
+                </div>
+            </div>
+        </div>
+
+        @* --- CARD DE EVENTO 3 (ESTÁTICO) --- *@
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0 card-hover-effect">
+                <img src="https://via.placeholder.com/350x200/ffc107/333333?text=Workshop+Design" class="card-img-top" alt="Design">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span class="badge bg-warning text-dark rounded-pill">Design</span>
+                        <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i>12 Jul, 2026</span>
+                    </div>
+                    <h5 class="card-title fw-bold">Workshop UI/UX Avançado</h5>
+                    <p class="card-text text-muted small">Aprende as melhores práticas para criar interfaces incríveis e intuitivas.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm w-100 stretched-link">Mais Detalhes</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
