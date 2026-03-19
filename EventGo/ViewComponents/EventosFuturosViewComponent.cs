@@ -1,4 +1,7 @@
-﻿public class EventosFuturosViewComponent : ViewComponent
+﻿using EventGo.Data;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+public class EventosFuturosViewComponent : ViewComponent
 {
     private readonly AppDbContext _context;
 
