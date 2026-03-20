@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using Microsoft.EntityFrameworkCore;
 using EventGo.Models;
 
@@ -39,3 +40,11 @@ namespace EventGo.Data
         }
     }
 }
+=======
+﻿namespace EventGo.Data
+{
+    public class AppDbContext
+    {
+    }
+}
+>>>>>>> 7bd6faf (models e dbcontext)

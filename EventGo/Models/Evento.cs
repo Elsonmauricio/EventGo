@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -25,3 +26,11 @@ namespace EventGo.Models
         public int Capacidade { get; set; }  // número máximo de participantes
     }
 }
+=======
+﻿namespace EventGo.Models
+{
+    public class Evento
+    {
+    }
+}
+>>>>>>> 7bd6faf (models e dbcontext)

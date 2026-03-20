@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -16,3 +17,11 @@ namespace EventGo.Models
         public List<Inscricao>? Inscricoes { get; set; }
     }
 }
+=======
+﻿namespace EventGo.Models
+{
+    public class Participante
+    {
+    }
+}
+>>>>>>> 7bd6faf (models e dbcontext)

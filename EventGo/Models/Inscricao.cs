@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using System.ComponentModel.DataAnnotations;
 
 namespace EventGo.Models
@@ -15,3 +16,11 @@ namespace EventGo.Models
         public DateTime DataInscricao { get; set; } = DateTime.Now;
     }
 }
+=======
+﻿namespace EventGo.Models
+{
+    public class Inscricao
+    {
+    }
+}
+>>>>>>> 7bd6faf (models e dbcontext)
