@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Remove="Data\Migrations\**" />
     <Content Remove="Data\Migrations\**" />
     <EmbeddedResource Remove="Data\Migrations\**" />
@@ -14,12 +15,21 @@
   </ItemGroup>
 
   <ItemGroup>
+=======
+>>>>>>> 333c2090e953223d18414127eea4a5c75613f002
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="9.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="9.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
+<<<<<<< HEAD
+=======
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\Migrations\" />
+>>>>>>> 333c2090e953223d18414127eea4a5c75613f002
   </ItemGroup>
 
 </Project>

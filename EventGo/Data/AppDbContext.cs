@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 333c2090e953223d18414127eea4a5c75613f002
 ﻿using Microsoft.EntityFrameworkCore;
 using EventGo.Models;
 
@@ -39,6 +42,7 @@ namespace EventGo.Data
                 .HasForeignKey(i => i.ParticipanteId);
         }
     }
+<<<<<<< HEAD
 }
 =======
 ﻿namespace EventGo.Data
@@ -48,3 +52,6 @@ namespace EventGo.Data
     }
 }
 >>>>>>> 7bd6faf (models e dbcontext)
+=======
+}
+>>>>>>> 333c2090e953223d18414127eea4a5c75613f002

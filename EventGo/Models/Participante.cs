@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 333c2090e953223d18414127eea4a5c75613f002
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -16,6 +19,7 @@ namespace EventGo.Models
         // Relações
         public List<Inscricao>? Inscricoes { get; set; }
     }
+<<<<<<< HEAD
 }
 =======
 ﻿namespace EventGo.Models
@@ -25,3 +29,6 @@ namespace EventGo.Models
     }
 }
 >>>>>>> 7bd6faf (models e dbcontext)
+=======
+}
+>>>>>>> 333c2090e953223d18414127eea4a5c75613f002

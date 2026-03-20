@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 333c2090e953223d18414127eea4a5c75613f002
 ﻿using System.ComponentModel.DataAnnotations;
 
 namespace EventGo.Models
@@ -15,6 +18,7 @@ namespace EventGo.Models
 
         public DateTime DataInscricao { get; set; } = DateTime.Now;
     }
+<<<<<<< HEAD
 }
 =======
 ﻿namespace EventGo.Models
@@ -24,3 +28,6 @@ namespace EventGo.Models
     }
 }
 >>>>>>> 7bd6faf (models e dbcontext)
+=======
+}
+>>>>>>> 333c2090e953223d18414127eea4a5c75613f002
