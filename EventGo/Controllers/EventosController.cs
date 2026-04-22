@@ -1,3 +1,4 @@
+
 ﻿using EventGo.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -9,10 +10,12 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace EventGo.Controllers
 {
     public class EventosController : Controller
     {
+
         private readonly ApplicationDbContext _context;
 
         // Construtor com injeção de dependência
@@ -363,5 +366,6 @@ namespace EventGo.Controllers
         {
             return _context.Eventos.Any(e => e.Id == id);
         }
+
     }
 }

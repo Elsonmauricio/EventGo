@@ -423,6 +423,11 @@ namespace EventGo.Controllers
 
             return Json(status);
         }
+
+        public IActionResult Explorar()
+{
+    return View();
+}
     }
 
     // ==================== CLASSES AUXILIARES ====================

@@ -1,0 +1,72 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Criar Conta";
+}
+
+<div class="container my-5 py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            @* Card com destaque na borda superior para diferenciar do Login *@
+            <div class="card shadow-lg border-0 rounded-4 overflow-hidden border-top border-primary border-5">
+                <div class="card-body p-5">
+                    
+                    @* Cabeçalho do Registo *@
+                    <div class="text-center mb-4">
+                        <div class="bg-light text-primary d-inline-block p-3 rounded-circle mb-3 shadow-sm">
+                            <i class="bi bi-person-plus-fill fs-2"></i>
+                        </div>
+                        <h2 class="fw-bold text-dark">Junta-te ao EventGo</h2>
+                        <p class="text-muted small">Cria a tua conta para começares a explorar e organizar eventos incríveis.</p>
+                    </div>
+
+                    <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger small mb-3" role="alert"></div>
+
+                        @* Campo de Email *@
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.Email" class="form-control border-0 bg-light rounded-3" autocomplete="username" aria-required="true" placeholder="nome@exemplo.com" />
+                            <label asp-for="Input.Email" class="text-muted">E-mail</label>
+                            <span asp-validation-for="Input.Email" class="text-danger small"></span>
+                        </div>
+
+                        <div class="row">
+                            @* Campo de Password *@
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input asp-for="Input.Password" class="form-control border-0 bg-light rounded-3" autocomplete="new-password" aria-required="true" placeholder="password" />
+                                    <label asp-for="Input.Password" class="text-muted">Palavra-passe</label>
+                                    <span asp-validation-for="Input.Password" class="text-danger small"></span>
+                                </div>
+                            </div>
+
+                            @* Campo de Confirmação *@
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input asp-for="Input.ConfirmPassword" class="form-control border-0 bg-light rounded-3" autocomplete="new-password" aria-required="true" placeholder="password" />
+                                    <label asp-for="Input.ConfirmPassword" class="text-muted">Confirmar</label>
+                                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger small"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        @* Botão de Registo *@
+                        <button id="registerSubmit" type="submit" class="w-100 btn btn-primary btn-lg rounded-pill shadow-sm fw-bold mt-3 py-3">
+                            Criar a minha conta
+                        </button>
+
+                        @* Rodapé do Card *@
+                        <div class="text-center small border-top mt-4 pt-4">
+                            <p class="text-muted mb-0">Já tens uma conta?</p>
+                            <a asp-page="./Login" asp-route-returnUrl="@Model.ReturnUrl" class="text-primary fw-bold text-decoration-none">Faz login aqui</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
