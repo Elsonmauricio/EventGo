@@ -1,0 +1,78 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Entrar";
+}
+
+<div class="container my-5 py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            @* Card com sombra suave e sem bordas para um look moderno *@
+            <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+                <div class="card-body p-5">
+                    
+                    @* Cabeçalho do Login *@
+                    <div class="text-center mb-4">
+                        <div class="bg-primary text-white d-flex align-items-center justify-content-center rounded-circle mb-3 shadow-sm mx-auto" 
+                            style="width: 80px; height: 80px;"> 
+                            
+                            <i class="bi bi-person-lock fs-1"></i>
+                        </div>
+                        <h2 class="fw-bold text-dark">Bem-vindo!</h2>
+                        <p class="text-muted small">Acede à tua conta EventGo para gerires os teus eventos.</p>
+                    </div>
+
+                    <form id="account" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger small mb-3" role="alert"></div>
+
+                        @* Campo de Email *@
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.Email" class="form-control border-0 bg-light rounded-3" autocomplete="username" aria-required="true" placeholder="nome@exemplo.com" />
+                            <label asp-for="Input.Email" class="text-muted">E-mail</label>
+                            <span asp-validation-for="Input.Email" class="text-danger small"></span>
+                        </div>
+
+                        @* Campo de Password *@
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.Password" class="form-control border-0 bg-light rounded-3" autocomplete="current-password" aria-required="true" placeholder="password" />
+                            <label asp-for="Input.Password" class="text-muted">Palavra-passe</label>
+                            <span asp-validation-for="Input.Password" class="text-danger small"></span>
+                        </div>
+
+                        @* Lembrar-me *@
+                        <div class="d-flex justify-content-between align-items-center mb-4 small">
+                            <div class="form-check">
+                                <input class="form-check-input" asp-for="Input.RememberMe" />
+                                <label asp-for="Input.RememberMe" class="form-check-label text-muted">
+                                    Lembrar-me
+                                </label>
+                            </div>
+                            <a id="forgot-password" asp-page="./ForgotPassword" class="text-primary text-decoration-none fw-medium">Esqueceste a senha?</a>
+                        </div>
+
+                        @* Botão de Submissão *@
+                        <button id="login-submit" type="submit" class="w-100 btn btn-primary btn-lg rounded-pill shadow-sm fw-bold mb-4 py-3">
+                            Entrar no EventGo
+                        </button>
+
+                        @* Rodapé do Card *@
+                        <div class="text-center small border-top pt-4">
+                            <p class="text-muted mb-0">Não tens uma conta?</p>
+                            <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="text-primary fw-bold text-decoration-none">Regista-te agora como utilizador ou organizador!</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            @* Link para reenvio de confirmação (opcional, fora do card) *@
+            <div class="text-center mt-3">
+                <a id="resend-confirmation" asp-page="./ResendEmailConfirmation" class="text-muted small text-decoration-none">Reenviar e-mail de confirmação</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

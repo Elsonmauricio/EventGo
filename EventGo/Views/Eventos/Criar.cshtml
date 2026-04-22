@@ -1,0 +1,47 @@
+@{
+    ViewData["Title"] = "Criar Novo Evento";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm border-0 rounded-4">
+                <div class="card-body p-5">
+                    <h2 class="fw-bold text-primary mb-4">
+                        <i class="bi bi-calendar-plus me-2"></i>Publicar Evento
+                    </h2>
+                    <p class="text-muted mb-4">Preenche os detalhes abaixo para criares o teu próximo grande evento.</p>
+
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label fw-medium">Nome do Evento</label>
+                            <input type="text" class="form-control form-control-lg rounded-3" placeholder="Ex: Conferência Tech 2026">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-medium">Data</label>
+                                <input type="date" class="form-control rounded-3">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-medium">Localização</label>
+                                <input type="text" class="form-control rounded-3" placeholder="Cidade ou Link Online">
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-medium">Descrição</label>
+                            <textarea class="form-control rounded-3" rows="4" placeholder="Fala um pouco sobre o evento..."></textarea>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg fw-bold rounded-pill shadow-sm">
+                                Criar Evento Agora
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

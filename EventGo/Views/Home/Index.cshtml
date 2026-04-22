@@ -1,8 +1,125 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Página Inicial";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@* --- HERO SECTION (Banner Grande) --- *@
+@* Usamos um fundo gradiente para um look moderno *@
+<div class="p-5 mb-4 bg-primary text-white rounded-0 shadow-lg" style="background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);">
+    <div class="container py-5 text-center">
+        @* Título Grande e Forte *@
+        <h1 class="display-3 fw-bold mb-3">Encontra o Teu Próximo Evento Inesquecível.</h1>
+        @* Subtítulo mais calmo *@
+        <p class="col-md-8 mx-auto fs-5 mb-5 opacity-75">Explora concertos, conferências, workshops e muito mais perto de ti ou online. Organiza o teu próprio evento em minutos.</p>
+        
+        @* Botões de Ação Principais *@
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a asp-controller="Home" asp-action="Explorar" class="btn btn-warning btn-lg px-4 me-sm-3 fw-bold text-dark rounded-pill shadow">
+                <i class="bi bi-search me-2"></i>Explorar Agora
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+@* --- SECÇÃO DE EVENTOS DESTAQUE (Hardcoded para design) --- *@
+<div class="container my-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold">Eventos em Destaque</h2>
+        <a href="#" class="text-primary text-decoration-none small">Ver todos<i class="bi bi-arrow-right ms-1"></i></a>
+    </div>
+
+    @* Linha de Grelha (Grid) com 3 colunas em Desktop *@
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        
+        @* --- CARD DE EVENTO 1 (ESTÁTICO) --- *@
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0 card-hover-effect">
+                @* Imagem Placeholder (podes mudar depois) *@
+                <img src="https://via.placeholder.com/350x200/6610f2/ffffff?text=Concerto+Rock" class="card-img-top" alt="Concerto">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span class="badge bg-danger rounded-pill">Música</span>
+                        <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i>20 Mai, 2026</span>
+                    </div>
+                    <h5 class="card-title fw-bold">Festival Rock Cidade 2026</h5>
+                    <p class="card-text text-muted small">Um dia inesquecível com as melhores bandas nacionais e internacionais.</p>
+                    <button type="button" class="btn btn-outline-primary rounded-pill w-100" 
+                            data-bs-toggle="modal" data-bs-target="#modalDetalhesEvento">
+                        Mais Detalhes
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="modal fade" id="modalDetalhesEvento" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered"> @* modal-lg para ser largo e centered para ficar no meio *@
+        <div class="modal-content border-0 rounded-4 shadow">
+            
+            @* Imagem de Topo do Modal *@
+            <div class="position-relative">
+                <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=2070" 
+                     class="img-fluid rounded-top-4 w-100" style="height: 250px; object-fit: cover;" alt="Capa">
+                <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <div>
+                        <span class="badge bg-primary mb-2">Música</span>
+                        <h3 class="fw-bold mb-0">Festival de Verão EventGo 2026</h3>
+                    </div>
+                    <div class="text-end">
+                        <div class="h4 fw-bold text-primary mb-0">Grátis</div>
+                        <small class="text-muted">Reserva Necessária</small>
+                    </div>
+                </div>
+
+                <hr class="text-muted">
+
+                <div class="row g-4 mb-4">
+                    <div class="col-6 col-md-4">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-calendar-event text-primary fs-4 me-2"></i>
+                            <div>
+                                <div class="small fw-bold">Data</div>
+                                <div class="small text-muted">25 Jul, 2026</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-clock text-primary fs-4 me-2"></i>
+                            <div>
+                                <div class="small fw-bold">Hora</div>
+                                <div class="small text-muted">21:00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-geo-alt text-primary fs-4 me-2"></i>
+                            <div>
+                                <div class="small fw-bold">Local</div>
+                                <div class="small text-muted">Altice Arena, Lisboa</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h5 class="fw-bold">Sobre o Evento</h5>
+                <p class="text-muted">
+                    Este é um evento de destaque na plataforma EventGo. Aqui podes encontrar os melhores artistas e uma experiência única de networking. Não percas a oportunidade de participar no maior festival tecnológico do ano!
+                </p>
+            </div>
+
+            <div class="modal-footer border-0 p-4 pt-0">
+                <button type="button" class="btn btn-light rounded-pill px-4" data-bs-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary rounded-pill px-4 fw-bold">Reservar o meu lugar</button>
+            </div>
+        </div>
+    </div>
 </div>

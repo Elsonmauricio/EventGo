@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "Explorar Eventos";
+}
+
+<div class="container my-5">
+    <h2 class="fw-bold mb-4">Explorar Todos os Eventos</h2>
+
+    @* Barra de Filtros (Visual) *@
+    <div class="row g-3 mb-5 p-4 bg-white shadow-sm rounded">
+        <div class="col-md-4">
+            <input type="text" class="form-control" placeholder="Procurar por nome...">
+        </div>
+        <div class="col-md-3">
+            <select class="form-select">
+                <option selected>Categoria</option>
+                <option>Música</option>
+                <option>Tech</option>
+                <option>Desporto</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <input type="date" class="form-control">
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-primary w-100">Filtrar</button>
+        </div>
+    </div>
+
+    @* Grelha de Eventos *@
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @* Podes copiar este bloco <div class="col"> várias vezes para simular muitos eventos *@
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0 card-hover-effect">
+                <img src="https://via.placeholder.com/350x200/6610f2/ffffff?text=Evento+A" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Workshop de C#</h5>
+                    <p class="card-text text-muted">Aprende as bases do Backend connosco.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm w-100">Ver Detalhes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
